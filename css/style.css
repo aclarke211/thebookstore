@@ -1,0 +1,410 @@
+/*===========================================================================================================*/
+/* CSS3 document created by Alex Clarke [September 2017] */
+/*===========================================================================================================*/
+/*===========================================================================================================*/
+/* Animation & Fonts */
+/*===========================================================================================================*/
+@import url( 'https://fonts.googleapis.com/css?family=Poppins');
+@keyframes fadeInAnim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/*==========================================================================================================*/
+/* Global Elements */
+/*===========================================================================================================*/
+html {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+/* Header elements and each individual section */
+h1,
+h2,
+h3,
+section {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	word-break: break-word;
+}
+/* Used for the majority of standard text on the page */
+p {
+	margin: 15px 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+	word-break: break-word;
+}
+/* How to style links (i.e. in navigation bar) */
+a {
+	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+}
+/*===========================================================================================================*/
+/* Body Element */
+/*===========================================================================================================*/
+body {
+	/*background-color: #5f8bcd;*/
+	margin: 0;
+	padding: 0;
+}
+/* Holds all elements within the body */
+.bodyElementsContainer {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+.welcomeContainer {
+	order: 4;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Page Title */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Holds the title for the page */
+.pageTitleContainer {
+	margin: 30px auto 20px;
+	text-align: center;
+}
+/*Holds the logo image for the site*/
+.pageLogoContainer {
+	width: 100px;
+	height: auto;
+	display: none;
+}
+/* Logo image for the site */
+.pageLogo {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* Text used for title of page */
+.pageTitle {
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-size: 50px;
+	display: inline-block;
+	margin: 0 30px;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Nav Bar */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Holds the navigation bar */
+.navBarContainer {
+	margin: 0;
+	padding: 0;
+}
+/* Holds all of the elements within the navigation bar */
+.nav {
+	margin: 0;
+	padding: 0;
+}
+/* The hamburger menu icon */
+.burgerMenuToggle {
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	padding: 20px 0;
+	transition: all 0.5s;
+}
+.burgerIconContainer {
+	width: 60px;
+	height: auto;
+	margin: 0 auto;
+	background-color: #2ea08c;
+	transition: all 0.5s;
+}
+.burgerIconContainer:hover {
+	background-color: #454862;
+}
+.burgerIconImage {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* Checkbox used for checking if the menu is open or not */
+#toggle {
+	display: none;
+}
+/* If the checkbox is active, apply the following styles the element with ".menu" class */
+#toggle:checked+.menu {
+	display: block;
+}
+/* The content of the navigation bar (i.e. holds the links) */
+.menu {
+	background-color: #e8e8e8;
+	margin: 20px auto;
+	text-align: center;
+	width: 100%;
+	display: none;
+	padding: 0;
+	box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	/* Animation used when the menu's display tag changes from none to block */
+	animation-name: fadeInAnim;
+	animation-duration: 2s;
+}
+/* A link item in the navigation bar */
+.menu .standardNavElement {
+	display: block;
+	padding: 30px;
+	border-bottom: 1px solid #484848;
+	transition: margin 0.4s, border-radius 0.4s, border 0.4s;
+}
+.menu .standardNavElement:hover {
+	background-color: #454862;
+	border-radius: 50px;
+	margin: 0 10px;
+}
+/* Change the colour of 'a' link text when 'li' element is hovered over */
+.menu .standardNavElement:hover .standardNavLink {
+	color: white;
+}
+.menu .standardNavElement:active {
+	background-color: #313341;
+	border-radius: 20px;
+	margin: 0 30px;
+}
+.menu .standardNavElement .standardNavLink {
+	text-decoration: none;
+	font-size: 17px;
+	letter-spacing: 2px;
+	color: black;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Welcome Text */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Holds the welcome text for the site */
+.welcomeTextContainer {
+	/*border: 1px solid red;*/
+	margin: 0 auto 30px;
+	padding: 0.5em;
+	text-align: center;
+	word-break: break-word;
+}
+/* The second paragraph starts with a big letter, simulating a books text */
+#welcomeTextFirstParagraph {}
+/* Making the first letter of the paragraph larger, simulating the look of a book */
+#welcomeTextFirstParagraph::first-letter {
+	color: #3f79cf;
+	font-size: 40px;
+	text-shadow: -1px -1px 0 #575757, 1px -1px 0 #575757, -1px 1px 0 #575757, 1px 1px 0 #575757;
+}
+/* The first welcome paragraph for the site */
+.welcomeText {
+	font-size: 18px;
+	margin: 0 30px;
+	letter-spacing: 2px;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Featured Books Section */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.featuredBooksSection {
+	max-width: 100%;
+	background-image: url("../img/books_bg.png");
+	word-break: break-all;
+	flex-basis: 25%;
+	order: 1;
+}
+/* All the elements within the featured books section */
+.featuredBooksSectionElements {
+	padding: 2em 0;
+	margin: 1em;
+}
+/*Holds the title for the featured books section*/
+.featuredBooksSectionTitleContainer {
+	text-align: center;
+	margin: 1em 0 2.5em;
+}
+/* Title text for the featured books section */
+.featuredBooksSectionTitleText {
+	/*font-variant: small-caps;*/
+	font-size: 35px;
+	letter-spacing: 7px;
+	text-transform: uppercase;
+	color: black;
+	text-shadow: -1px -1px 1px #e0e0e0, 1px -1px 1px #e0e0e0, -1px 1px 1px #e0e0e0, 1px 1px 1px #e0e0e0;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Featured Books Panels */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*Holds all of the featured books panels*/
+.featuredBooksPanelsContainer {
+	text-align: center;
+}
+/* An individual featured book panel */
+.featuredBookPanel {
+	background-color: white;
+	border: 1px solid black;
+	max-width: 35em;
+	margin: 2em auto;
+	padding: 2em;
+	box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-o-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-ms-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+}
+.bookCoverImageContainer_featuredBookPanel {
+	max-width: 8em;
+	border: 1px solid black;
+	height: auto;
+	margin: 1em auto;
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-o-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-ms-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+}
+.bookTextContainer_featuredBookPanel {
+	margin: 2em 0 0;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Main Books Section */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.mainBooksSection {
+	/*background-color: red;*/
+	/*border: 1px solid black;*/
+	margin: 1em;
+	padding: 1em;
+}
+/* Holds all of the main book panels */
+.mainBooksPanelsContainer {
+	order: 3;
+}
+/* A single main book panel */
+.mainBookPanel {
+	max-width: 80%;
+	/*background-color: blue;*/
+	border: 1px solid black;
+	margin: 2em auto;
+	padding: 2em;
+	text-align: center;
+	box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-o-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+	-ms-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
+}
+/* This class is added to a book if it has been selected by the user */
+.is-selected {
+	background-color: pink;
+}
+.bookCoverImageContainer_mainBookPanel {
+	max-width: 8em;
+	height: auto;
+	border: 1px solid black;
+	margin: 1em auto;
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-o-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+	-ms-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+}
+.bookCoverImage {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.bookTextContainer_mainBookPanel {}
+.bookHeaderContainer {
+	margin: 1em 0;
+}
+.bookTitle {
+	/*text-decoration: underline;*/
+	display: inline-block;
+	margin-right: 0.3em;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+.bookSubtitle {
+	display: inline-block;
+	font-size: 0.9em;
+}
+.bookAuthors {
+	font-size: 0.8em;
+}
+.bookPageNumber {
+	font-size: 0.8em;
+}
+.bookDescription {
+	margin-top: 1em;
+	font-size: 0.8em;
+}
+.bookDescription::after {
+	content: "...";
+}
+/*===========================================================================================================*/
+/* Social Media Links */
+/*===========================================================================================================*/
+.socialMediaSection {
+	padding: 1em 1em 3em;
+}
+/* Holds all elements within the social media section */
+.socialMediaElementsContainer {
+	/*border: 1px solid blue;*/
+	max-width: 11.3em;
+	margin: 1em auto;
+}
+/* Holds a social media icon */
+.socialMediaIconContainer {
+	width: 2.5em;
+	height: auto;
+	display: inline-block;
+	margin: 0 0.5em;
+	transition: transform 0.3s;
+}
+.socialMediaIconContainer:hover {
+	transform: rotateY(40deg);
+	-webkit-transform: rotateY(40deg);
+	/* Safari | Chrome */
+	-moz-transform: rotateY(40deg);
+	/* Firefox */
+	-o-transform: rotateY(40deg);
+	/* Opera */
+	-ms-transform: rotateY(40deg);
+	/* Internet Explorer */
+}
+.socialMediaIconContainer:active {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	/* Safari | Chrome */
+	-moz-transform: rotateY(180deg);
+	/* Firefox */
+	-o-transform: rotateY(180deg);
+	/* Opera */
+	-ms-transform: rotateY(180deg);
+	/* Internet Explorer */
+}
+/* An social media icon image */
+.socialMediaIcon {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+/*************************************************************************************************************/
+/*===========================================================================================================*/
+/* BREAKPOINTS */
+/*===========================================================================================================*/
+/*************************************************************************************************************/
+/*===========================================================================================================*/
+/* 1st Breakpoint - [Mobile Devices] */
+/*===========================================================================================================*/
+@media only screen and (min-width: 580px) {
+	/*===========================================================================================================*/
+	/* Header Element - [1st Break] */
+	/*===========================================================================================================*/
+	header {
+		/*background-color: #AD76e8;*/
+	}
+	/*===========================================================================================================*/
+	/* [END OF]: 1st Break Point - [Mobile Devices] */
+	/*===========================================================================================================*/
+}

@@ -1,0 +1,241 @@
+<!--=======================================================================================================-->
+<!-- Developer Notes -->
+<!--=======================================================================================================-->
+<!-- HTML document created by Alex Clarke [September 2017] -->
+
+<!-- - This website has been tested on the following browsers:  Google Chrome [v60.0.3112.113],
+                                                                Mozilla Firefox [v45.0.2],
+                                                                Opera [v47.0.2631.80],
+                                                                Internet Explorer [v11.540.15063.0] -->
+
+<!-- No third party JavaScript libraries or CSS pre-processors were used during development and the website is entirely hand coded, built from a mobile first perspective. -->
+
+<!-- If the subtitle for a book was 'undefined', the subtitle has been removed. -->
+
+<!-- The user can select anywhere within the line which the burger menu is located on to make accessing the naivagation bar for user friendly on mobile devices. -->
+
+<!-- The first letter of the welcome text has been made larger, emulating the look of the lettering in a traditional paper book. -->
+
+<!-- Cookies used to store the selection status of each book, this enables the selected book to be remembered after the page is reloaded. -->
+
+<!-- A discalimer is displayed stating that the site uses cookies. Also provides information regarding Cookies not working in Google Chrome until the website is being hosted. -->
+
+<!--=======================================================================================================-->
+<!-- Devleoper Notes: After Feedback Improvements -->
+<!--=======================================================================================================-->
+<!-- Github version control added. -->
+
+<!-- Flexbox used to layout elements instead of in-line block -->
+
+<!--=======================================================================================================-->
+<!-- HTML Element -->
+<!--=======================================================================================================-->
+<!-- Document type -->
+<!DOCTYPE html>
+<!-- Language used by the document -->
+<html lang="en">
+
+  <!--=====================================================================================================-->
+  <!-- Head Element -->
+  <!--=======================================================================================================-->
+  <head>
+
+    <!-- Character set used by the website -->
+    <meta charset="uft-8">
+    <!-- Set zoom and scale of website when it loads -->
+    <meta name="viewpoint" content="width=device-width, initial-scale = 1">
+    <!-- Title of the site (displayed in the tab bar etc.) -->
+    <title>Google Books</title>
+    <!-- Icon that appears on a browser tab, and when site is bookmarked -->
+    <link rel="shortcut icon" href="img/logo.png">
+    <!-- Location of the stylesheet associated with this page -->
+    <link rel="stylesheet" type="text/css" href="css/newStyle.css">
+
+  </head>
+
+  <!--=======================================================================================================-->
+  <!-- Body Element -->
+  <!--=======================================================================================================-->
+  <body>
+
+    <!-- Holds all of the elements within the body -->
+    <div class="bodyElementsContainer">
+
+      <section class="welcomeSection">
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Title of Page -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Holds the title element for the page -->
+        <div class="pageTitleContainer">
+
+          <!-- Holds the logo for the site -->
+          <div class="pageLogoContainer">
+            <!-- The logo image for the site -->
+            <img class="pageLogo" src="img/logo.png">
+          </div>
+
+          <!-- Text used for the title of the page -->
+          <h1 class="pageTitle">The Book Store</h1>
+        </div>
+
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Navigation Bar -->
+        <!-- - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Holds the navigation bar -->
+        <div class="navBarContainer">
+
+          <!-- Contains the navigation bar elements -->
+          <div class="nav">
+
+            <!-- Holds the hamburger menu icon;
+                Acts as a checkbox due to the "for" tag pointing to a hidden checkbox element -->
+            <label class="burgerMenuToggle" for="toggle">
+
+              <div class="burgerIconContainer">
+                <img class="burgerIconImage" src="img/burgerIcon.png">
+              </div>
+
+            </label>
+            <!-- Hidden checkbox used for opening and closing the menu naigation bar -->
+            <input type="checkbox" id="toggle">
+
+            <!-- Content of the navigation bar -->
+            <ul class="menu">
+              <li class="standardNavElement">
+                <a class="standardNavLink" href="#">Home</a>
+              </li>
+              <li class="standardNavElement">
+                <a class="standardNavLink" href="#">Books</a>
+              </li>
+              <li class="standardNavElement">
+                <a class="standardNavLink" href="#">Magazines</a>
+              </li>
+              <li class="standardNavElement">
+                <a class="standardNavLink" href="#">E-Books</a>
+              </li>
+              <li class="standardNavElement">
+                <a class="standardNavLink" href="#">Account</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Welcome Text -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Holds the welcome text for the page -->
+        <div class="welcomeTextContainer">
+          <p class="welcomeText" id="welcomeTextFirstParagraph">The future of the web is in your hands with these essential development guides.</p>
+          <p class="welcomeText">Master skills ranging from creating animated websites to developing video games using HTML canvas.</p>
+        </div>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- [END OF]: Welcome Section -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      </section>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <!-- Featured Books Section -->
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <!-- Contains elements relating to the featured books -->
+      <section class="featuredBooksSection">
+
+        <div class="featuredBooksSectionElements">
+
+          <!-- Holds the header text for the featured books section -->
+          <div class="featuredBooksSectionTitleContainer">
+            <!-- Text to display title of the featured books section -->
+            <h2 class="featuredBooksSectionTitleText">Featured</h2>
+          </div>
+          <!-- Holds all of the featured books panels -->
+          <div class="featuredBooksPanelsContainer">
+            <!-- An individual featured book -->
+            <!-- <div class="featuredBookPanel">Featured Book 1</div> -->
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <!-- Main Books Section -->
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <!-- Holds all elements for the main books section -->
+      <section class="mainBooksSection">
+        <!-- Holds all of the main book panels -->
+        <div class="mainBooksPanelsContainer">
+          <!-- A single main book panel -->
+          <!-- <div class="mainBookPanel"> -->
+          <!--     				<div class="bookHeaderContainer">
+    					<p class="bookTitle">Book Title</p>
+    					<p class="bookSubtitle">Book Subtitle</p>
+    				</div>
+    				<div class="bookAuthors">Authors Name(s)</div>
+    				<div class="bookPageNumber">Number of Pages</div>
+    				<div class="bookDescription">Description of the book.</div> -->
+        </div>
+
+      </section>
+
+      <!--=====================================================================================================-->
+      <!-- Socal Media Section -->
+      <!--=====================================================================================================-->
+      <section class="socialMediaSection">
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Social Media Icons -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Holds all elements in the social media section -->
+        <div class="socialMediaElementsContainer">
+
+          <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!-- Twitter Icon -->
+          <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!-- Holds the Twitter icon -->
+          <div class="socialMediaIconContainer" id="twitterIconContainer" title="Twitter">
+            <!-- Location Twitter icon image -->
+            <img class="socialMediaIcon" src="img/twitter_icon.png">
+          </div>
+
+          <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!-- Facebook Icon -->
+          <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!-- Holds the Facebook icon -->
+          <div class="socialMediaIconContainer" id="facebookIconContainer" title="Facebook">
+            <!-- Location of Facebook icon image -->
+            <img class="socialMediaIcon" src="img/facebook_icon.png">
+          </div>
+
+          <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!-- Instagram Icon -->
+          <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+          <!-- Holds the Instagram icon -->
+          <div class="socialMediaIconContainer" id="instagramIconContainer" title="Instagram">
+            <!-- Location of Instagram icon image -->
+            <img class="socialMediaIcon" src="img/instagram_icon.png">
+          </div>
+
+        </div>
+
+      </section>
+
+      <!--=====================================================================================================-->
+      <!-- [END OF]: bodyElementsContainer -->
+      <!--=====================================================================================================-->
+    </div>
+
+    <!--=====================================================================================================-->
+    <!-- JavaScript File References -->
+    <!--=====================================================================================================-->
+    <!-- Main JavaScript file is identified at the end of the body element to improve page load times -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- Google Books API -->
+    <script src="https://www.googleapis.com/books/v1/volumes?q=HTML5&callback=handleResponse"></script>
+
+  </body>
+
+</html>
