@@ -178,7 +178,7 @@ function addNewDiv(book, bookID, panelType, panelsLocation) {
     "<img class='bookCoverImage' src=' " + bookCover + "'></div>" +
     "<div class='bookTextContainer_" + panelType + "'>" +
     // Holds both the title and subtitle of the book
-    "<div class='bookHeaderContainer_" + panelType + "'>" +
+    "<div class='bookHeaderContainer bookHeaderContainer_" + panelType + "'>" +
     // Title of the book
     "<p class='bookTitle bookTitle_" + panelType + "'>" + bookTitle + "</p>" +
     // The books subtitle
