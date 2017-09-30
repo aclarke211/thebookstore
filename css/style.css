@@ -417,6 +417,7 @@ body {
     flex-direction: row;
     justify-content: left;
     align-items: center;
+    word-break: break-all;
   }
   .bookCoverImageContainer_mainBookPanel {
     margin-right: 20px;
