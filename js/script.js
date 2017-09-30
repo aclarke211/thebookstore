@@ -143,8 +143,8 @@ function addNewDiv(book, bookID, panelType, panelsLocation) {
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   // Find the cover image for book using API
   var bookCover = book.volumeInfo.imageLinks.thumbnail;
-  // Identify the title of the book using API
-  var bookTitle = book.volumeInfo.title;
+  // Identify the title of the book using API and add a space after the text
+  var bookTitle = book.volumeInfo.title + "&nbsp;";
 
 
   // Locate subtitle for book using API
@@ -178,20 +178,20 @@ function addNewDiv(book, bookID, panelType, panelsLocation) {
     "<img class='bookCoverImage' src=' " + bookCover + "'></div>" +
     "<div class='bookTextContainer_" + panelType + "'>" +
     // Holds both the title and subtitle of the book
-    "<div class='bookHeaderContainer'>" +
+    "<div class='bookHeaderContainer_" + panelType + "'>" +
     // Title of the book
-    "<p class='bookTitle'>" + bookTitle + "</p>" +
+    "<p class='bookTitle_" + panelType + "'>" + bookTitle + "</p>" +
     // The books subtitle
-    "<p class='bookSubtitle'>" + bookSubtitle + "</p>" +
+    "<p class='bookSubtitle_" + panelType + "'>" + bookSubtitle + "</p>" +
     // [END OF:] bookHeaderContainer
     "</div>" +
 
     // All of the authors of the book
-    "<p class='bookAuthors'><b>Author(s): </b>" + authorsNames + "</p>" +
+    "<p class='bookAuthors_" + panelType + "'><b>Author(s): </b>" + authorsNames + "</p>" +
     // Display the number of pages in the book
-    "<p class='bookPageNumber'><b>Pages: </b>" + numberOfPages + "</p>" +
+    "<p class='bookPageNumber_" + panelType + "'><b>Pages: </b>" + numberOfPages + "</p>" +
     // The short description with a character limit of 140
-    "<p class='bookDescription'>" + shortBookDescription + "</p></div>";
+    "<p class='bookDescription_" + panelType + "'>" + shortBookDescription + "</p></div>";
 
   // Attach the new div to the parent location
   panelsLocation.appendChild(newDiv);
