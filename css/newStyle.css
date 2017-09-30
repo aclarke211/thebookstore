@@ -245,6 +245,8 @@ body {
   max-width: 35em;
   margin: 2em auto;
   padding: 2em;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
@@ -256,6 +258,7 @@ body {
   border: 1px solid black;
   height: auto;
   margin: 1em auto;
+  order: 1;
   box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
@@ -264,6 +267,7 @@ body {
 }
 .bookTextContainer_featuredBookPanel {
   margin: 2em 0 0;
+  order: 2;
 }
 /*===========================================================================================================*/
 /* Main Books Section */
