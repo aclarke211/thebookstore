@@ -235,7 +235,7 @@ body {
 /*Holds the title for the featured books section*/
 .featuredBooksSectionTitleContainer {
   text-align: center;
-  margin: 10px;
+  margin: 16px 10px 10px;
 }
 /* Title text for the featured books section */
 .featuredBooksSectionTitleText {
@@ -407,6 +407,10 @@ body {
   /*===========================================================================================================*/
   /* Main Books Section - [1st Break] */
   /*===========================================================================================================*/
+  /* Title text for the featured books section */
+  .featuredBooksSectionTitleText {
+    font-size: 40px;
+  }
   /* A single main book panel */
   .mainBookPanel {
     /*padding: 20px;*/
@@ -418,6 +422,8 @@ body {
     margin-right: 20px;
     order: 1;
     justify-content: flex-start;
+    width: 150px;
+    height: auto;
   }
   .bookCoverImage {}
   .bookTextContainer_mainBookPanel {
@@ -499,32 +505,30 @@ body {
     order: 3;
     margin: 0;
     flex-direction: row-reverse;
+    align-items: flex-start;
   }
   .mainBooksSection {
-    flex: 3;
+    flex: 4;
   }
   .mainBooksPanelsContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
+    padding: 0;
   }
   .mainBookPanel {
-    /*flex: 1;*/
-    /*flex-basis: 35%;*/
     height: 270px;
     width: 43%;
-    /*overflow: auto;*/
     align-items: center;
-    padding: 10px;
+    justify-content: center;
   }
   .bookCoverImageContainer_mainBookPanel {
-    width: auto;
-    height: 70%;
-    margin: 0;
+    width: 200px;
+    margin: 10px;
   }
   .bookTextContainer_mainBookPanel {
-    height: 100%;
+    max-height: 100%;
     overflow: auto;
   }
   .bookHeaderContainer {
@@ -542,6 +546,8 @@ body {
   }
   .featuredBooksSection {
     flex: 1;
+    padding: 0 20px;
+    margin: 20px 0 0;
   }
   .socialMediaSection {
     order: 1;
