@@ -13,9 +13,9 @@ var featuredBooksPanelsContainer = document.getElementsByClassName("featuredBook
 /*===========================================================================================================*/
 /* Managing Cookies */
 /*===========================================================================================================*/
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Create a Cookie */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 function createCookie(cookieName, cookieValue, cookieActiveDays) {
   // The amount of days specified before the cookie expires
   if (cookieActiveDays) {
@@ -35,9 +35,9 @@ function createCookie(cookieName, cookieValue, cookieActiveDays) {
 }
 
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Read a Cookie */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 function readCookie(name) {
   // Used to search for a cookie by name; Name of cookie followed by an equals sign
   var cookieNameEquals = name + "=";
@@ -59,9 +59,9 @@ function readCookie(name) {
   return null;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Remove a Cookie */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 function removeCookie(name) {
   // Create a cookie with the name of the cookie to be deleted
   // If the cookie has an expiry date in the past, the cookie is automatically removed by the browser
@@ -138,9 +138,9 @@ function populateFeaturedBooks(myResponse) {
 // (book = item from API response, bookID = location of book in array, panelType = class name for new div, panelsLocation = parent to add the new div to)
 function addNewDiv(book, bookID, panelType, panelsLocation) {
 
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
   /* Books Information */
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
   // Find the cover image for book using API
   var bookCover = book.volumeInfo.imageLinks.thumbnail;
   // Identify the title of the book using API and add a space after the text
@@ -162,9 +162,9 @@ function addNewDiv(book, bookID, panelType, panelsLocation) {
   // Create a short description with no more than 140 characters. (Characters range from 0 to 140)
   var shortBookDescription = bookDescription.substring(0, 140) + "...";
 
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
   /* Create New Div */
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - */
   // Create a new div element for the new books data
   var newDiv = document.createElement("div");
   // Set the class of the new div
