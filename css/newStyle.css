@@ -140,15 +140,15 @@ body {
 }
 /* If the checkbox is active, apply the following styles the element with ".menu" class */
 #toggle:checked+.menu {
-  display: block;
+  display: flex;
 }
 /* The content of the navigation bar (i.e. holds the links) */
 .menu {
   background-color: #e8e8e8;
   margin: 30px auto;
   text-align: center;
-  width: 100%;
   display: none;
+  flex-direction: column;
   padding: 0;
   box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
@@ -273,13 +273,13 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-.bookTitle_featuredBookPanel {
+.bookTitle {
   font-weight: bold;
   font-size: 16px;
   order: 1;
   text-align: center;
 }
-.bookSubtitle_featuredBookPanel {
+.bookSubtitle {
   font-size: 15px;
   order: 2;
 }
@@ -334,16 +334,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.bookTitle_mainBookPanel {
-  font-weight: bold;
-  font-size: 16px;
-  order: 1;
-  text-align: center;
-}
-.bookSubtitle_mainBookPanel {
-  font-size: 15px;
-  order: 2;
 }
 /*===========================================================================================================*/
 /* Social Media Section */
@@ -423,6 +413,15 @@ body {
     flex-direction: row;
     justify-content: left;
   }
+  .bookTitle {
+    font-size: 17px;
+  }
+  .bookSubtitle {
+    font-size: 16px;
+  }
+  p {
+    font-size: 15px;
+  }
   .bookAuthors_mainBookPanel {
     text-align: left;
   }
@@ -434,5 +433,40 @@ body {
   }
   /*===========================================================================================================*/
   /* [END OF]: 1st Break Point - [Mobile Devices] */
+  /*===========================================================================================================*/
+}
+/*===========================================================================================================*/
+/* 2nd Break Point - [PCs] */
+/*===========================================================================================================*/
+@media only screen and (min-width: 1080px) {
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /* Nav Bar - [2nd Break] */
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  .burgerMenuToggle {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    max-width: 70%;
+    border: 1px solid #848484;
+  }
+  .menu .standardNavElement {
+    margin: 0;
+    flex: 1;
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid #A4A4A4;
+  }
+  .menu .standardNavElement:hover {
+    border-radius: 5px;
+    /*border-left: 1px solid black;*/
+  }
+  .menu .standardNavElement:last-child {
+    /*border: none;*/
+    /*border-left: 1px solid black;*/
+  }
+  /*===========================================================================================================*/
+  /* [END OF]: 2nd Break Point - [PCs] */
   /*===========================================================================================================*/
 }

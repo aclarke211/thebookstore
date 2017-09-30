@@ -180,9 +180,9 @@ function addNewDiv(book, bookID, panelType, panelsLocation) {
     // Holds both the title and subtitle of the book
     "<div class='bookHeaderContainer_" + panelType + "'>" +
     // Title of the book
-    "<p class='bookTitle_" + panelType + "'>" + bookTitle + "</p>" +
+    "<p class='bookTitle bookTitle_" + panelType + "'>" + bookTitle + "</p>" +
     // The books subtitle
-    "<p class='bookSubtitle_" + panelType + "'>" + bookSubtitle + "</p>" +
+    "<p class='bookSubtitle bookSubtitle_" + panelType + "'>" + bookSubtitle + "</p>" +
     // [END OF:] bookHeaderContainer
     "</div>" +
 
