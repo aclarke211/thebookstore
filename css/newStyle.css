@@ -38,8 +38,8 @@ section {
 p {
   font-family: sans-serif;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  margin: 15px 0;
+  font-size: 14px;
+  margin: 10px 0;
   padding: 0;
   word-break: break-word;
 }
@@ -217,8 +217,8 @@ body {
 }
 /* All the elements within the featured books section */
 .featuredBooksSectionElements {
-  padding: 10px 0;
-  margin: 20px;
+  padding: 2px 0;
+  margin: 10px;
 }
 /*Holds the title for the featured books section*/
 .featuredBooksSectionTitleContainer {
@@ -242,9 +242,9 @@ body {
 .featuredBookPanel {
   background-color: white;
   border: 1px solid black;
-  max-width: 35em;
-  margin: 2em auto;
-  padding: 2em;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
@@ -254,7 +254,7 @@ body {
   -ms-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
 }
 .bookCoverImageContainer_featuredBookPanel {
-  max-width: 8em;
+  max-width: 170px;
   border: 1px solid black;
   height: auto;
   margin: 1em auto;
@@ -266,14 +266,12 @@ body {
   -ms-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
 }
 .bookTextContainer_featuredBookPanel {
-  margin: 2em 0 0;
   order: 2;
 }
 /*===========================================================================================================*/
 /* Main Books Section */
 /*===========================================================================================================*/
 .mainBooksSection {
-  background-color: red;
   order: 3;
 }
 /* Holds all of the main book panels */
@@ -282,12 +280,13 @@ body {
 }
 /* A single main book panel */
 .mainBookPanel {
-  max-width: 80%;
-  /*background-color: blue;*/
+  max-width: 90%;
   border: 1px solid black;
-  margin: 2em auto;
-  padding: 2em;
+  margin: 20px auto;
+  padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.75);
@@ -299,50 +298,109 @@ body {
   background-color: pink;
 }
 .bookCoverImageContainer_mainBookPanel {
-  max-width: 8em;
+  max-width: 170px;
   height: auto;
   border: 1px solid black;
-  margin: 1em auto;
+  margin: 10px auto;
   box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
   -o-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
   -ms-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.75);
+  order: 1;
 }
 .bookCoverImage {
   width: 100%;
   height: 100%;
   display: block;
 }
-.bookTextContainer_mainBookPanel {}
+.bookTextContainer_mainBookPanel {
+  order: 2;
+}
 .bookHeaderContainer {
-  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .bookTitle {
-  /*text-decoration: underline;*/
-  display: inline-block;
-  margin-right: 0.3em;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 16px;
+  order: 1;
+  text-align: center;
 }
 .bookSubtitle {
-  display: inline-block;
-  font-size: 0.9em;
+  font-size: 15px;
+  order: 2;
 }
-.bookAuthors {
-  font-size: 0.8em;
-}
-.bookPageNumber {
-  font-size: 0.8em;
-}
-.bookDescription {
-  margin-top: 1em;
-  font-size: 0.8em;
-}
+.bookAuthors {}
+.bookPageNumber {}
+.bookDescription {}
 /*===========================================================================================================*/
 /* Social Media Section */
 /*===========================================================================================================*/
 .socialMediaSection {
-  background-color: pink;
   order: 4;
+  padding-bottom: 10px;
+}
+/* Holds all elements within the social media section */
+.socialMediaElementsContainer {
+  /*border: 1px solid blue;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+/* Holds a social media icon */
+.socialMediaIconContainer {
+  width: 60px;
+  height: auto;
+  margin: 0 15px;
+  transition: transform 0.3s;
+}
+.socialMediaIconContainer:hover {
+  transform: rotateY(40deg);
+  -webkit-transform: rotateY(40deg);
+  /* Safari | Chrome */
+  -moz-transform: rotateY(40deg);
+  /* Firefox */
+  -o-transform: rotateY(40deg);
+  /* Opera */
+  -ms-transform: rotateY(40deg);
+  /* Internet Explorer */
+}
+.socialMediaIconContainer:active {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  /* Safari | Chrome */
+  -moz-transform: rotateY(180deg);
+  /* Firefox */
+  -o-transform: rotateY(180deg);
+  /* Opera */
+  -ms-transform: rotateY(180deg);
+  /* Internet Explorer */
+}
+/* An social media icon image */
+.socialMediaIcon {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+/*************************************************************************************************************/
+/*===========================================================================================================*/
+/* BREAKPOINTS */
+/*===========================================================================================================*/
+/*************************************************************************************************************/
+/*===========================================================================================================*/
+/* 1st Breakpoint - [Mobile Devices] */
+/*===========================================================================================================*/
+@media only screen and (min-width: 450px) {
+  /*===========================================================================================================*/
+  /* Header Element - [1st Break] */
+  /*===========================================================================================================*/
+  .pageTitleContainer {
+    background-color: #AD76e8;
+  }
+  /*===========================================================================================================*/
+  /* [END OF]: 1st Break Point - [Mobile Devices] */
+  /*===========================================================================================================*/
 }
