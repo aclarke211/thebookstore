@@ -67,13 +67,17 @@ body {
 /*===========================================================================================================*/
 .welcomeSection {
   order: 1;
+  padding-top: 15px;
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Page Title */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Holds the title for the page */
 .pageTitleContainer {
-  margin: 30px auto 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 /*Holds the logo image for the site*/
@@ -211,14 +215,22 @@ body {
 /*===========================================================================================================*/
 /* Featured Books Section */
 /*===========================================================================================================*/
+.booksSection {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+}
+/*===========================================================================================================*/
+/* Featured Books Section */
+/*===========================================================================================================*/
 .featuredBooksSection {
   background-image: url("../img/books_bg.png");
-  order: 2;
+  order: 1;
 }
 /* All the elements within the featured books section */
 .featuredBooksSectionElements {
-  padding: 2px 0;
-  margin: 10px;
+  /*padding: 2px 0;*/
+  /*margin: 10px;*/
 }
 /*Holds the title for the featured books section*/
 .featuredBooksSectionTitleContainer {
@@ -287,7 +299,7 @@ body {
 /* Main Books Section */
 /*===========================================================================================================*/
 .mainBooksSection {
-  order: 3;
+  order: 2;
 }
 /* Holds all of the main book panels */
 .mainBooksPanelsContainer {}
@@ -339,7 +351,7 @@ body {
 /* Social Media Section */
 /*===========================================================================================================*/
 .socialMediaSection {
-  order: 4;
+  order: 3;
   padding: 15px 0 25px;
 }
 /* Holds all elements within the social media section */
@@ -350,7 +362,7 @@ body {
 }
 /* Holds a social media icon */
 .socialMediaIconContainer {
-  width: 60px;
+  width: 50px;
   height: auto;
   margin: 0 15px;
   transition: transform 0.3s;
@@ -439,9 +451,25 @@ body {
 /* 2nd Break Point - [PCs] */
 /*===========================================================================================================*/
 @media only screen and (min-width: 1080px) {
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  .bodyElementsContainer {
+    margin: 0 10%;
+  }
+  /*===========================================================================================================*/
+  /* Welcome Section - [2nd Break] */
+  /*===========================================================================================================*/
+  .welcomeSection {
+    order: 2;
+    padding: 0;
+  }
+  .pageTitleContainer {
+    margin-top: -10px;
+  }
+  .pageLogoContainer {
+    display: flex;
+  }
+  /*===========================================================================================================*/
   /* Nav Bar - [2nd Break] */
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /*===========================================================================================================*/
   .burgerMenuToggle {
     display: none;
   }
@@ -465,6 +493,20 @@ body {
   .menu .standardNavElement:last-child {
     /*border: none;*/
     /*border-left: 1px solid black;*/
+  }
+  .booksSection {
+    order: 3;
+    margin: 0;
+    flex-direction: row-reverse;
+  }
+  .socialMediaSection {
+    order: 1;
+    padding: 0;
+  }
+  /* Holds all elements within the social media section */
+  .socialMediaElementsContainer {
+    justify-content: flex-end;
+    margin: 20px 0;
   }
   /*===========================================================================================================*/
   /* [END OF]: 2nd Break Point - [PCs] */
